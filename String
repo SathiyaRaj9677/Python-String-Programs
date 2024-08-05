@@ -10,6 +10,7 @@ result = " ".join(empty_list)
 print(result)
 
 # 2. Count the word occurance:
+
 s = "i can go to chennai and i can go to madurai"
 words = s.split()
 word_count = {}
