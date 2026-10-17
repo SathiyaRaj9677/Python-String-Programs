@@ -151,3 +151,12 @@ for index, char in enumerate(s):
     if char in vowels:
         print(f"{char} at the position of {index}")
 
+# 14. Remove all vowels from the string
+s = "Hello World"
+vowels = ["a", "e", "i", "o", "u","A","E","I","O","U"]
+new_list = []
+for char in s:
+    if char not in vowels:
+        new_list.append(char)
+result = " ".join(new_list)
+print(result)
