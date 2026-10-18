@@ -1,5 +1,77 @@
+# Program 1: Check even or odd
 
-# Program 1: Print Fibonacci series
+num = 7
+
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
+# OUTPUT:
+# Odd
+
+
+
+# Program 2: Sum of digits
+
+num = 1234
+total = 0
+while num > 0:
+    total += num % 10
+    num //= 10
+
+print(total)
+
+# OUTPUT:
+# 10
+
+
+
+# Program 3: Count the digits in a number
+
+num = 12345
+count = len(str(abs(num)))
+print(count)
+
+# OUTPUT:
+# 5
+
+
+
+# Program 4: Swap two numbers
+
+a = 10
+b = 20
+
+a, b = b, a
+
+print("a =", a)
+print("b =", b)
+
+# OUTPUT:
+# a = 20
+# b = 10
+
+
+
+# Program 5: Find the second-largest distinct number
+
+numbers = [10, 20, 30, 30, 25]
+
+unique_numbers = sorted(set(numbers))
+
+if len(unique_numbers) >= 2:
+    print(unique_numbers[-2])
+else:
+    print("Second-largest number does not exist")
+
+# OUTPUT:
+# 25
+
+
+
+
+# Program 6: Print Fibonacci series
 
 n = int(input("Enter the number of terms: "))
 
@@ -16,7 +88,8 @@ for i in range(n):
 
 
 
-# Program 2: Fibonacci series in a list
+
+# Program 7: Fibonacci series in a list
 
 def fibonacci(n):
     fib = []
@@ -35,7 +108,7 @@ print(fibonacci(10))
 
 
 
-# Program 3: Check whether a number is Fibonacci
+# Program 8: Check whether a number is Fibonacci
 
 def is_fibonacci(n):
     if n < 0:
@@ -58,7 +131,8 @@ print(is_fibonacci(6))
 
 
 
-# Program 4: Reverse using string slicing
+
+# Program 9: Reverse using string slicing
 
 num = 12345
 
@@ -71,7 +145,7 @@ print(reversed_num)
 
 
 
-# Program 5: Reverse using a while loop
+# Program 10: Reverse using a while loop
 
 num = 12345
 reverse = 0
@@ -89,7 +163,8 @@ print(reverse)
 
 
 
-# Program 6: Check whether a number is a palindrome
+
+# Program 11: Check whether a number is a palindrome
 
 num = 121
 
@@ -103,7 +178,7 @@ else:
 
 
 
-# Program 7: Palindrome without string conversion
+# Program 12: Palindrome without string conversion
 
 num = 121
 original = num
@@ -125,7 +200,7 @@ else:
 
 
 
-# Program 8: Factorial using a for loop
+# Program 13: Factorial using a for loop
 
 n = 5
 fact = 1
@@ -140,7 +215,7 @@ print(fact)
 
 
 
-# Program 9: Factorial using a function
+# Program 14: Factorial using a function
 
 def factorial(n):
     if n < 0:
@@ -162,7 +237,7 @@ print(factorial(10))
 
 
 
-# Program 10: Factorial using recursion
+# Program 15: Factorial using recursion
 
 def factorial(n):
     if n < 0:
@@ -180,7 +255,7 @@ print(factorial(5))
 
 
 
-# Program 11: Check whether a number is prime
+# Program 16: Check whether a number is prime
 
 def is_prime(n):
     if n <= 1:
@@ -205,7 +280,7 @@ else:
 
 
 
-# Program 12: Print prime numbers from 1 to 100
+# Program 17: Print prime numbers from 1 to 100
 
 for num in range(2, 101):
     is_prime = True
@@ -225,7 +300,7 @@ for num in range(2, 101):
 
 
 
-# Program 13: Print the first 100 prime numbers
+# Program 18: Print the first 100 prime numbers
 
 def is_prime(n):
     if n < 2:
@@ -250,7 +325,7 @@ while count < 100:
 
 
 
-# Program 14: Check Armstrong number
+# Program 19: Check Armstrong number
 
 num = 153
 digits = str(num)
@@ -272,7 +347,7 @@ else:
 
 
 
-# Program 15: Print Armstrong numbers from 1 to 1000
+# Program 20: Print Armstrong numbers from 1 to 1000
 
 for num in range(1, 1001):
     digits = str(num)
@@ -288,7 +363,7 @@ for num in range(1, 1001):
 
 
 
-# Program 16: Find largest, middle and smallest numbers
+# Program 21: Find largest, middle and smallest numbers
 
 num1 = 25
 num2 = 30
@@ -309,7 +384,7 @@ print("Smallest:", numbers[2])
 
 
 
-# Program 17: Find the largest number without max()
+# Program 22: Find the largest number without max()
 
 a, b, c = 25, 30, 20
 
@@ -328,7 +403,7 @@ print("Largest:", largest)
 
 
 
-# Program 18: Convert binary string to decimal
+# Program 23: Convert binary string to decimal
 
 binary_string = input("Enter a binary string: ")
 
@@ -345,7 +420,7 @@ print("Decimal equivalent:", decimal_number)
 
 
 
-# Program 19: Binary to decimal without int(..., 2)
+# Program 24: Binary to decimal without int(..., 2)
 
 binary_string = "100"
 decimal_number = 0
@@ -360,50 +435,8 @@ print(decimal_number)
 
 
 
-# Program 20: Check even or odd
 
-num = 7
-
-if num % 2 == 0:
-    print("Even")
-else:
-    print("Odd")
-
-# OUTPUT:
-# Odd
-
-
-
-# Program 21: Sum of digits
-
-num = 1234
-total = 0
-
-while num > 0:
-    total += num % 10
-    num //= 10
-
-print(total)
-
-# OUTPUT:
-# 10
-
-
-
-# Program 22: Count the digits in a number
-
-num = 12345
-
-count = len(str(abs(num)))
-
-print(count)
-
-# OUTPUT:
-# 5
-
-
-
-# Program 23: Check whether a number is positive, negative or zero
+# Program 25: Check whether a number is positive, negative or zero
 
 num = -5
 
@@ -419,7 +452,7 @@ else:
 
 
 
-# Program 24: Find the sum of the first N natural numbers
+# Program 26: Find the sum of the first N natural numbers
 
 n = 10
 total = 0
@@ -434,7 +467,7 @@ print(total)
 
 
 
-# Program 25: Check whether a number is a perfect number
+# Program 27: Check whether a number is a perfect number
 
 num = 28
 total = 0
@@ -453,7 +486,7 @@ else:
 
 
 
-# Program 26: Find the GCD of two numbers
+# Program 28: Find the GCD of two numbers
 
 import math
 
@@ -467,7 +500,7 @@ print(math.gcd(a, b))
 
 
 
-# Program 27: Find the LCM of two numbers
+# Program 29: Find the LCM of two numbers
 
 import math
 
@@ -483,7 +516,7 @@ print(lcm)
 
 
 
-# Program 28: Swap two numbers
+# Program 30: Swap two numbers
 
 a = 10
 b = 20
@@ -499,7 +532,7 @@ print("b =", b)
 
 
 
-# Program 30: Find the second-largest distinct number
+# Program 31: Find the second-largest distinct number
 
 numbers = [10, 20, 30, 30, 25]
 
