@@ -145,11 +145,13 @@ result = " ".join(new_list)
 print(result)
 
 # 13. Find the vowels position in the string
+
 s = "Hello World"
 vowels = ["a", "e", "i", "o", "u","A","E","I","O","U"]
 for index, char in enumerate(s):
     if char in vowels:
         print(f"{char} at the position of {index}")
+
 
 # 14. Remove all vowels from the string
 s = "Hello World"
@@ -160,3 +162,21 @@ for char in s:
         new_list.append(char)
 result = " ".join(new_list)
 print(result)
+
+# 15. Replace only the second occurrence of 'a' with 'x'
+
+s = "sathiyaraj"
+new_str = ""
+count = 0
+for i in range(len(s)):
+    if s[i] == "a":
+        count += 1
+        if count == 2:
+            new_str += "x"
+        else:
+            new_str += s[i]
+    else:
+        new_str += s[i]
+print(new_str)
+
+
