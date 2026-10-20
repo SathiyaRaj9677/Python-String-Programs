@@ -1,11 +1,12 @@
 '''
-Syntax	                            Meaning	                            Result type
+Syntax	                            Meaning	                             Result 
+
 a, b = [10, 20]	            Unpack values into variables	           Individual values
-a, *b = [10, 20, 30]	    Collect remaining values	                 b is a list
-*args	                    Pack positional arguments	                   Tuple
-func(*values)	        Unpack iterable into arguments	                Positional arguments
-**kwargs	            Pack keyword arguments	                            Dictionary
-func(**data)	    Unpack dictionary into keyword arguments	        Keyword arguments
+a, *b = [10, 20, 30]	     Collect remaining values	                 b is a list
+*args	                     Pack positional arguments	                   Tuple
+func(*values)	           Unpack iterable into arguments	           Positional arguments
+**kwargs	                 Pack keyword arguments	                       Dictionary
+func(**data)	        Unpack dictionary into keyword arguments	     Keyword arguments
 
 Remember: * is used with iterables such as lists and tuples,
 while ** is used with dictionaries when passing keyword arguments.

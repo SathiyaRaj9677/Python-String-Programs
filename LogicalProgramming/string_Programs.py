@@ -180,3 +180,26 @@ for i in range(len(s)):
 print(new_str)
 
 
+# 16. Replaces every character at an odd index (1, 3, 5, 7, 9...) with "x" and keeps characters at even indices unchanged.
+
+s = "sathiyaraj"
+new_str = ""
+for i in range(len(s)):
+    if i % 2 == 1:
+        new_str += "x"
+    else:
+        new_str += s[i]
+print(new_str)
+
+# 17. Remove consecutive duplicate characters from the string
+
+s = "saathhiyaraaj"
+new_str = ""
+
+for i in range(len(s)):
+    if i == 0 or s[i] != s[i-1]:
+        new_str += s[i]
+
+print(new_str)
+
+    
