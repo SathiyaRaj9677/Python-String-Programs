@@ -1,19 +1,35 @@
+
+import os
 import openpyxl
 
-#File-->Workbook--->Sheets-->Rows-->Cells
+# File --> Workbook --> Sheets --> Rows --> Cells
 
-file="C:\SeleniumPractice\data.xlsx"
-workbook=openpyxl.load_workbook(file)
-sheet=workbook["Sheet1"]
+filename = "data.xlsx"
+search_path = os.path.expanduser("~")
 
-rows=sheet.max_row # count number of rows in a excel sheet 6
-cols=sheet.max_column # count number of columns in a excel sheet  4
+# Find the Excel file
+file_path = None
 
-#Reading all the rows & columns from excel sheet
-for r in range(1,rows+1):
-    for c in range(1,cols+1):
-        print(sheet.cell(r,c).value,end='       ')
-    print()
+for root, dirs, files in os.walk(search_path):
+    if filename in files:
+        file_path = os.path.join(root, filename)
+        break
 
+if file_path is None:
+    print("Excel file not found!")
+else:
+    print("File found:", file_path)
 
+    workbook = openpyxl.load_workbook(file_path)
+    sheet = workbook["Sheet1"]
 
+    rows = sheet.max_row
+    cols = sheet.max_column
+
+    # Read all rows and columns from the Excel sheet
+    for r in range(1, rows + 1):
+        for c in range(1, cols + 1):
+            print(sheet.cell(r, c).value, end="       ")
+        print()
+
+    workbook.close()
